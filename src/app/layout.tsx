@@ -2,18 +2,10 @@ import type { Metadata } from "next";
 // import { Inter } from "next/font/google";
 import Navigation from "@/components/Navigation";
 import CustomProvider from "@/provider";
-import { QueryKey } from "@tanstack/react-query";
 import React from "react";
 import "./globals.css";
 
-declare module "@tanstack/react-query" {
-    interface Register {
-        // queryMeta: MyMeta;
-        mutationMeta: {
-            invalidates?: QueryKey[];
-        };
-    }
-}
+// import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 
 // const inter = Inter({ subsets: ["latin"] });
 

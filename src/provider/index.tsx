@@ -11,7 +11,16 @@ import axios from "axios";
 import { FC, PropsWithChildren, useState } from "react";
 
 // eslint-disable-next-line @typescript-eslint/no-empty-object-type
-interface IProps extends PropsWithChildren {}
+declare module "@tanstack/react-query" {
+    interface Register {
+        // queryMeta: MyMeta;
+        mutationMeta: {
+            invalidates?: QueryKey[];
+        };
+    }
+}
+
+type IProps = PropsWithChildren;
 
 // Define a default query function that will receive the query key
 const defaultQueryFn = async ({ queryKey }: { queryKey: QueryKey }) => {
