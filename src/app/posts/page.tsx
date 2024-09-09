@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useGetPosts } from "@/hooks/Query/usePost";
 import React, { useEffect, useState } from "react";
-import { IPostsResponse } from "../types/posts.type";
+import { IPostsResponse } from "../../types/posts.type";
 
 const Posts = () => {
     const { data } = useGetPosts();

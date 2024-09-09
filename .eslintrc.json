@@ -22,7 +22,8 @@
             "node": {
                 "extensions": [".ts", ".tsx"]
             },
-            "typescript": {}
+            "typescript": {},
+            "ant-design": {}
         }
     },
     "parser": "@typescript-eslint/parser",
@@ -30,7 +31,7 @@
     "extends": [
         "plugin:@typescript-eslint/recommended",
         "plugin:@typescript-eslint/strict",
-        "plugin:@typescript-eslint/stylistic",
+        // "plugin:@typescript-eslint/stylistic",
         "eslint:recommended",
         "airbnb",
         "prettier",

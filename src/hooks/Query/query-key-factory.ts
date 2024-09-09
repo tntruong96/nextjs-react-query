@@ -11,4 +11,9 @@ const postsKeys = {
         ] as const,
 };
 
-export { postsKeys };
+const photoKeys = {
+    all: ["photo"] as const,
+    list: () => [...photoKeys.all, "list"] as const,
+};
+
+export { postsKeys, photoKeys };
