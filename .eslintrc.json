@@ -28,7 +28,7 @@
         }
     },
     "parser": "@typescript-eslint/parser",
-    "plugins": ["@typescript-eslint"],
+    "plugins": ["@typescript-eslint", "import"],
     "extends": [
         "plugin:@typescript-eslint/recommended",
         "plugin:@typescript-eslint/strict",
@@ -75,6 +75,15 @@
             }
         ],
         "no-nested-ternary": "off",
-        "import/prefer-default-export": "off"
+        "import/prefer-default-export": "off",
+        "import/no-extraneous-dependencies": [
+            "error",
+            {
+                "devDependencies": false,
+                "optionalDependencies": false,
+                "peerDependencies": false,
+                "bundledDependencies": false
+            }
+        ]
     }
 }

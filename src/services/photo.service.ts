@@ -1,11 +1,20 @@
 import { TPhoto } from "@/types/photo.type";
 import axios from "axios";
 
+const URL = "https://api.unsplash.com/";
+
 const getPhoto = async (): Promise<TPhoto[]> => {
     const { data } = await axios.get(
-        "https://api.unsplash.com/photos?client_id=lJszmEw7a_PX8DyCemXqpawrP-82qQZHbqQL-f5pQVs"
+        `${URL}photos?client_id=${process.env.NEXT_PUBLIC_UNSPLASH_KEY}`
     );
     return data;
 };
 
-export { getPhoto };
+const getPhotoViaId = async (id: string): Promise<TPhoto> => {
+    const { data } = await axios.get(
+        `${URL}photos/${id}?client_id=${process.env.NEXT_PUBLIC_UNSPLASH_KEY}`
+    );
+    return data;
+};
+
+export { getPhoto, getPhotoViaId };

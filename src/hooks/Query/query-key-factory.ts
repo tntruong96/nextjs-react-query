@@ -14,6 +14,7 @@ const postsKeys = {
 const photoKeys = {
     all: ["photo"] as const,
     list: () => [...photoKeys.all, "list"] as const,
+    id: (id: string) => [...photoKeys.all, "detail", id] as const,
 };
 
 export { postsKeys, photoKeys };
