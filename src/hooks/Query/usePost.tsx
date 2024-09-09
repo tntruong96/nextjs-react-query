@@ -1,5 +1,5 @@
 import { useQuery } from "@tanstack/react-query";
-import { IPostsResponse } from "@/app/types/posts.type";
+import { IPostsResponse } from "@/types/posts.type";
 import { postsKeys } from "./query-key-factory";
 
 const useGetPosts = () => {

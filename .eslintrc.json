@@ -23,7 +23,8 @@
                 "extensions": [".ts", ".tsx"],
                 "moduleDirectory": ["node_modules", "src/*"]
             },
-            "typescript": {}
+            "typescript": {},
+            "ant-design": {}
         }
     },
     "parser": "@typescript-eslint/parser",
@@ -31,7 +32,7 @@
     "extends": [
         "plugin:@typescript-eslint/recommended",
         "plugin:@typescript-eslint/strict",
-        "plugin:@typescript-eslint/stylistic",
+        // "plugin:@typescript-eslint/stylistic",
         "eslint:recommended",
         "airbnb",
         "prettier",

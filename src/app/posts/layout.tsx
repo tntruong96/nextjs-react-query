@@ -1,7 +1,11 @@
-import React, { FC, PropsWithChildren } from "react";
+import { Metadata } from "next";
+import { FC, PropsWithChildren } from "react";
 
-export const metadata = {
-    title: "Posts Pages",
+export const metadata: Metadata = {
+    title: {
+        default: "Posts Pages",
+        absolute: "Posts Pages",
+    },
     description: "List of the posts",
 };
 
