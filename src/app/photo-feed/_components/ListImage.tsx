@@ -7,7 +7,6 @@ import React from "react";
 
 const ListImage = () => {
     const { data, isLoading } = useGetListPhoto();
-
     if (isLoading) return <div>Loading</div>;
     return (
         <div className="grid grid-cols-4 gap-4">

@@ -24,22 +24,17 @@ const DetailModalPage: FC<Props> = () => {
                 open: showModal,
                 footer: null,
                 onCancel: () => {
-                    // console.log(path);
-                    // router.;
                     setShowModal(false);
                 },
                 afterClose() {
-                    // window.location.reload();
                     router.back();
-                    // router.prefetch(path);
-                    // router.push(path);
-                    // console.log(path);
                 },
             }}
         >
             <Image
-                height={500}
-                width={500}
+                className="bg-cover"
+                height="100%"
+                width="100%"
                 src={data?.urls.regular}
                 alt={data?.alt_description}
             />
